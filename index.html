@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./book.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="title">Library</div>
+        <button id="log">Log in</button>
+    </header>
+    <div class="add">
+        <button id="add">+ Add book</button>
+    </div>
+    <section id="library">
+        <div class="book">
+            <div class="title">Meditations</div>
+            <div class="author">Marcus Aurelius</div>
+            <div class="pages">250 pages</div>
+            <div class="read">read</div>
+            <button class="remove">Remove</button>
+        </div>
+    </section>
+    <div class="AddPopup">
+        <div class="formPopup" id="popupForm">
+          <form class="formContainer">
+            <label for="book_title">
+              <strong>Title</strong>
+            </label>
+            <input type="text" id="book_title" placeholder="Title" name="title" required>
+            <label for="book_author">
+              <strong>Author</strong>
+            </label>
+            <input type="text" id="book_author" placeholder="Author" name="author" required>
+            <label for="book_pages">
+                <strong>Pages</strong>
+              </label>
+            <input type="text" id="book_pages" placeholder="Pages" name="Pages" required>
+            <label for="book_read"> Have you read it?</label><br>
+            <input type="checkbox" id="book_read" name="read">
+            <button type="submit" class="submit">Submit</button>
+            <button type="button" class="cancel">Close</button>
+          </form>
+        </div>
+    </div>
+    <section>
+
+    </section>
+</body>
+</html>
