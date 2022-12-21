@@ -11,17 +11,6 @@ function Book(title, author, pages, read) {
     }
 }
 
-let theHobbit = new Book("The Hobbit", "J.R.R Tolkien", "295", "read" );
-let Zen = new Book("Zen", "Pirsig", "300", "not read");
-
-function addBookToLibrary() {
-    myLibrary.push(theHobbit);
-    myLibrary.push(Zen);
-}
-
-addBookToLibrary();
-
-
 function display() {
     const library = document.getElementById('library');
     while (library.hasChildNodes()) {
@@ -32,6 +21,7 @@ function display() {
         let books = document.createElement('div');
         books.classList.add('book');
         books.setAttribute("index", index);
+        const book_index = books.getAttribute('index');
         
         let title = document.createElement('div');
         title.classList.add('title');
@@ -45,8 +35,28 @@ function display() {
         let read = document.createElement('div');
         read.classList.add('read');
 
+        if (element.read == "read") {
+            read.style.backgroundColor = "#32de84";
+        } else {
+            read.style.backgroundColor = "#fd5c63";
+        }
+
+        read.addEventListener("click", () => {
+            if (element.read == "read") {
+                element.read = "not read"
+                read.style.backgroundColor = "#fd5c63"
+            } else {
+                element.read = "read" ;
+                read.style.backgroundColor = "#32de84";
+            }
+        });
+
         let remove = document.createElement('button');
         remove.classList.add('remove');
+        remove.addEventListener("click", () => {
+            myLibrary.splice(book_index, 1);
+            display();
+        });
 
         library.appendChild(books);
 

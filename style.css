@@ -99,6 +99,7 @@ button.remove {
     max-width: 300px;
     padding: 20px;
     background-color: #fff;
+    font-size: 1.3em;
 }
 
 .formContainer input[type=text] {
@@ -107,6 +108,7 @@ button.remove {
   margin: 5px 0 20px 0;
   border: none;
   background: #eee;
+  font-size: .9em;
 }
 
 .formContainer input[type=text]:focus {
@@ -115,6 +117,7 @@ button.remove {
 }
 
 .formContainer .submit {
+    font-size: 1em;
     padding: 12px 20px;
     border: none;
     background-color: #8ebf42;
@@ -122,13 +125,33 @@ button.remove {
     cursor: pointer;
     width: 100%;
     margin-bottom: 15px;
+    margin-top: 10px;
     opacity: 0.8;
 }
 
 .formContainer .cancel {
     background-color: #cc0000;
+    font-size: 1em;
 }
 
 button:hover {
     opacity: 1;
+    cursor: pointer
+}
+
+
+.read {
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 5px;
+    margin: 7px;
+    width: 70%;
+}
+
+.read:hover {
+    cursor: pointer
+}
+
+.remove {
+    margin: 10px
 }
